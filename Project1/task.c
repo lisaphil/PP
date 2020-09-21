@@ -43,9 +43,9 @@ void proccess_str(char* s) {
         time[i] = check_sym(*s, time[i], &i);
         if (time[i] < 0) return;
     }
-    check_time(time[i], i);
-    printf("finished correctly! %d %d %d", time[0], time[1], time[2]);
-    return;
+    if (check_time(time[i], i) >= 0) {
+        printf("finished correctly! %d %d %d", time[0], time[1], time[2]);
+    }
 }
 
 int main(void)                  
